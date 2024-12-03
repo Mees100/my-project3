@@ -1,7 +1,10 @@
+import styles from "./App.module.scss";
+import Titles from "./Titles";
+
 function App() {
   return (
     <>
-      <h1>dfef</h1>
+      <Titles />;
     </>
   );
 }
