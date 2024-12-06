@@ -1,3 +1,5 @@
+import styles from "./sass/Title.module.scss";
+
 import { ChangeEvent, useEffect, useState } from "react";
 
 type Article = {
@@ -46,17 +48,17 @@ function Titles() {
 
   return (
     <>
-      <div>
+      <div className={styles.wrapper}>
         <input
           type="text"
-          placeholder="search"
+          placeholder="type"
           value={filterValue}
           onChange={onChange}
         ></input>
         <button onClick={reset}>Reset</button>
       </div>
 
-      <div>{listTitles}</div>
+      <div className={styles.ray}>{listTitles}</div>
     </>
   );
 }

@@ -1,0 +1,12 @@
+
+@import "helper/variables";
+
+@for $i from 1 through 3 {
+  .ray:nth-child(3n + #{$i}) {
+    background-color: lighten($base-color, $i * 5%);
+  }
+}
+
+.wrapper {
+  
+}

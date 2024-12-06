@@ -1,10 +1,12 @@
-import styles from "./App.module.scss";
+import styles from "./sass/App.module.scss";
 import Titles from "./Title";
 
 function App() {
   return (
     <>
-      <Titles />;
+      <div className={styles.container}>
+        <Titles />;
+      </div>
     </>
   );
 }
