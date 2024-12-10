@@ -1,8 +1,9 @@
- 
+@import "helper/mixins";
+
 .container{
     width: 50%;
     margin: 0 auto;
     max-width: 1400px;
-    
-}
+    @include solid-border(2px);
+    }
 

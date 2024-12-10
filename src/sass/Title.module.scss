@@ -1,6 +1,6 @@
 
 @import "helper/variables";
-@import "helper/mixin";
+@import "helper/mixins";
 
 @for $i from 1 through 3 {
   .ray:nth-child(3n + #{$i}) {
@@ -23,12 +23,14 @@ h2 {
   size: 14px;
  }
   input, button{
-  padding:5px 15px;
-  
-  
+  padding:5px 15px; 
+
 }
  button{
   cursor: pointer;
  }
- 
+ .ray{
+  margin: 30px 70px;
+  @include solid-border(1px, #C4B5A2)
+ }
 }
