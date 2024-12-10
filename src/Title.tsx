@@ -48,6 +48,7 @@ function Titles() {
 
   return (
     <>
+      <h2>Select title</h2>
       <div className={styles.wrapper}>
         <input
           type="text"
@@ -56,9 +57,9 @@ function Titles() {
           onChange={onChange}
         ></input>
         <button onClick={reset}>Reset</button>
-      </div>
 
-      <div className={styles.ray}>{listTitles}</div>
+        <div className={styles.ray}>{listTitles}</div>
+      </div>
     </>
   );
 }
