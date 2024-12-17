@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <div className={styles.container}>
-        <Titles />;
+        <Titles />
       </div>
     </>
   );

@@ -36,7 +36,7 @@ function Titles() {
       return true;
     }
 
-    return article.title.includes(filterValue);
+    return article.title.toLowerCase().includes(filterValue.toLowerCase());
   });
 
   const listTitles = displayArticles.map((article) => (
@@ -51,12 +51,15 @@ function Titles() {
       <h2>Select title</h2>
       <div className={styles.wrapper}>
         <input
+          className={styles.inputText}
           type="text"
-          placeholder="type"
+          placeholder="search by title"
           value={filterValue}
           onChange={onChange}
         ></input>
-        <button onClick={reset}>Reset</button>
+        <button className={styles.btn} onClick={reset}>
+          Reset
+        </button>
 
         <div className={styles.ray}>{listTitles}</div>
       </div>
