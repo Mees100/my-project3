@@ -1,7 +1,18 @@
-@mixin solid-border($width, $color: #A18A6C) {
-      border: {
-         color: $color;
-         width: $width;
-         style: solid;
-      }
-    }
+@mixin solid-border($width, $radius, $color: fade-out(#546c75, 0.5)) {
+  border: {
+    width: $width;
+    radius: $radius;
+    color: $color;
+    style: solid;
+  }
+}
+
+@mixin btn-font-family($font-weight) {
+  font: {
+    font-size: 16px;
+    family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    weight: $font-weight;
+    style: normal;
+  }
+}

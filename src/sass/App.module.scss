@@ -1,9 +1,10 @@
 @import "helper/mixins";
+@import "helper/variables";
 
 .container{
     width: 50%;
     margin: 0 auto;
     max-width: 1400px;
-    @include solid-border(2px);
+    @include solid-border(2px, 1px,$base-color);
     }
 

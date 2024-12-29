@@ -1,36 +1,84 @@
-
 @import "helper/variables";
 @import "helper/mixins";
 
-@for $i from 1 through 3 {
-  .ray:nth-child(3n + #{$i}) {
-    background-color: lighten($base-color, $i * 5%);
-  }
-};
-
 h2 {
-  font-family: serif;
   text-align: center;
-  color: $color;
+  color: $primary-color;
   padding: 20px;
-  
-  }
+}
 
 .wrapper {
- text-align: center;
- font : {
-  family: sans-serif;
-  size: 14px;
- }
-  input, button{
-  padding:5px 15px; 
+  text-align: center;
+  font : {
+    family: sans-serif;
+  }
+  .inputText,
+  .btn {
+    margin: 4px 5px;
+    padding: 0.76rem;
+    font-size: 16px;
+  }
+  .inputText {
+    @include solid-border(1px, 9999px);
+    animation-name: input-animation;
+    animation-duration: 2s;
+    font-size: 16px;
+    transition: {
+      property: box-shadow;
+      duration: 0.15s, 0.15s;
+      timing-function: ease-in-out, ease-in-out;
+    }
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 0.25rem $color-blue-shadow;
+    }
 
+    @keyframes input-animation {
+      0% {
+        background-color: $color-contrast-light;
+      }
+      25% {
+        background-color: $color-contrast;
+      }
+      50% {
+        background-color: $color-contrast-light;
+      }
+      75% {
+        background-color: $color-contrast;
+      }
+      100% {
+        background-color: $color-contrast-light;
+      }
+    }
+  }
+
+  .btn {
+    cursor: pointer;
+    @include btn-font-family(400);
+    @include solid-border(1px, 9999px);
+    background-color: $btn-background-color;
+    letter-spacing: 0.05rem;
+    box-shadow:
+      0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+      0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+    min-width: 105px;
+    transition: {
+      property: background-color;
+      duration: 0.5s, 0.5s;
+      timing-function: ease-in-out, ease-in-out;
+    }
+    &:hover {
+      color: #ffffff;
+      background-color: $primary-color-light;
+    }
+  }
 }
- button{
-  cursor: pointer;
- }
- .ray{
-  margin: 30px 70px;
-  @include solid-border(1px, #C4B5A2)
- }
+
+.ray {
+  background-color: $bg-color;
+  margin: 30px 100px;
+  font-size: 0.875rem;
+  @include solid-border(1px, 1px, $base-color);
 }

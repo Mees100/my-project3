@@ -48,7 +48,7 @@ function Titles() {
 
   return (
     <>
-      <h2>Select title</h2>
+      <h2>Filter by title</h2>
       <div className={styles.wrapper}>
         <input
           className={styles.inputText}
