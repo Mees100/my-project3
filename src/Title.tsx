@@ -53,7 +53,7 @@ function Titles() {
         <input
           className={styles.inputText}
           type="text"
-          placeholder="search by title"
+          placeholder="filter title"
           value={filterValue}
           onChange={onChange}
         ></input>
