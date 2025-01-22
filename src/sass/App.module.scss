@@ -7,3 +7,10 @@
   max-width: 1400px;
   @include solid-border(2px, 1px, $base-color);
 }
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    border: 0;
+  }
+}
