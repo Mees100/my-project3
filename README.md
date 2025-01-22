@@ -15,6 +15,8 @@
    - use prettier and eslint to keep code readable
    - use a bundler (vite) to build and develop with automatic reloading
 
+I didn't focus on the design itself.
+
 ## Deploy
 
 Run the following commands to deploy
