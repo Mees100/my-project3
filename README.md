@@ -14,3 +14,10 @@
 3. Common dev tools:
    - use prettier and eslint to keep code readable
    - use a bundler (vite) to build and develop with automatic reloading
+
+## Deploy
+
+Run the following commands to deploy
+
+- `npm run build`
+- `npm run deploy`
